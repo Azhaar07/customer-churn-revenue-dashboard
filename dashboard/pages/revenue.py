@@ -5,11 +5,11 @@ import plotly.express as px
 
 st.set_page_config(
     page_title="Revenue Analytics",
-    page_icon="💰",
+    page_icon="",
     layout="wide"
 )
 
-st.title("💰 Revenue Analytics")
+st.title("Revenue Analytics")
 st.caption("Revenue performance, customer value and growth trends")
 
 conn = sqlite3.connect(
@@ -52,17 +52,17 @@ LIMIT 1
 col1, col2, col3 = st.columns(3)
 
 col1.metric(
-    "💵 Total Revenue",
+    "Total Revenue",
     f"₹{int(total_revenue.iloc[0]['revenue']):,}"
 )
 
 col2.metric(
-    "📊 Avg Monthly Revenue",
+    "Avg Monthly Revenue",
     f"₹{int(monthly_revenue.iloc[0]['avg_rev']):,}"
 )
 
 col3.metric(
-    "🏆 Best Revenue Month",
+    "Best Revenue Month",
     best_month.iloc[0]["month"]
 )
 
@@ -101,7 +101,7 @@ st.plotly_chart(
 # REGION ANALYSIS
 # =====================
 
-st.subheader("🌍 Revenue by Region")
+st.subheader("Revenue by Region")
 
 region_df = pd.read_sql("""
 SELECT
@@ -161,7 +161,7 @@ st.plotly_chart(
 # TOP CUSTOMERS
 # =====================
 
-st.subheader("🏆 Top Revenue Customers")
+st.subheader("Top Revenue Customers")
 
 top_customers = pd.read_sql("""
 SELECT
