@@ -72,7 +72,7 @@ st.divider()
 # REVENUE TREND
 # =====================
 
-st.subheader("📈 Monthly Revenue Trend")
+st.subheader("Monthly Revenue Trend")
 
 revenue_df = pd.read_sql("""
 SELECT
@@ -131,7 +131,7 @@ st.plotly_chart(
 # SUBSCRIPTION ANALYSIS
 # =====================
 
-st.subheader("💳 Revenue by Subscription Plan")
+st.subheader("Revenue by Subscription Plan")
 
 plan_df = pd.read_sql("""
 SELECT
