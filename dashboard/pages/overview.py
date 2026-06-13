@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📈 Business Overview")
+st.title("Business Overview")
 
 conn = sqlite3.connect(
     "database/churn_analytics.db"
@@ -78,7 +78,7 @@ col4.metric(
 # REGION DISTRIBUTION
 # =========================
 
-st.subheader("🌍 Customers by Region")
+st.subheader("Customers by Region")
 
 region_df = pd.read_sql(
     """
@@ -107,7 +107,7 @@ st.plotly_chart(
 # SUBSCRIPTION DISTRIBUTION
 # =========================
 
-st.subheader("💳 Subscription Distribution")
+st.subheader("Subscription Distribution")
 
 plan_df = pd.read_sql(
     """
