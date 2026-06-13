@@ -5,11 +5,11 @@ import plotly.express as px
 
 st.set_page_config(
     page_title="Churn Analytics",
-    page_icon="⚠️",
+    page_icon="",
     layout="wide"
 )
 
-st.title("⚠️ Churn Analytics")
+st.title("Churn Analytics")
 st.caption("Customer retention and churn risk monitoring")
 
 conn = sqlite3.connect(
@@ -51,22 +51,22 @@ churn_rate = (
 col1, col2, col3, col4 = st.columns(4)
 
 col1.metric(
-    "🚨 High Risk",
+    "High Risk",
     int(high_risk.iloc[0]["total"])
 )
 
 col2.metric(
-    "⚡ Medium Risk",
+    "Medium Risk",
     int(medium_risk.iloc[0]["total"])
 )
 
 col3.metric(
-    "✅ Safe Users",
+    "Safe Users",
     int(safe_users.iloc[0]["total"])
 )
 
 col4.metric(
-    "📉 Churn Rate",
+    "Churn Rate",
     f"{churn_rate:.2f}%"
 )
 
