@@ -331,6 +331,13 @@ streamlit run dashboard/app.py
 
 Developed as a Data Analytics and Data Science portfolio project to demonstrate practical skills in Python, SQL, Data Visualization, Business Analytics, and Dashboard Development.
 
+# Automated Customer Churn & Revenue Analytics Dashboard
+
+### Live Application
+https://customer-churn-revenue-dashboard.streamlit.app
+
+### Source Code
+https://github.com/Azhaar07/customer-churn-revenue-dashboard
 
 ## Dashboard Preview
 
